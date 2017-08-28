@@ -15,6 +15,7 @@ class SearchBar extends Component {
         return (
             <div>
                 <input
+                    className="input is-danger"
                     value={this.state.term}
                     onChange={e => this.setState({term: e.target.value})}
                 />
@@ -23,4 +24,4 @@ class SearchBar extends Component {
     }
 };
 
-export default SearchBar;
+export { SearchBar };
