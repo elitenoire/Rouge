@@ -1,9 +1,11 @@
 import React from 'react';
 
-const VideoListItem = ({ video }) => {
+const VideoListItem = ({ video, onSelectPlayNow }) => {
     const imgUrl = video.snippet.thumbnails.default.url;
     return (
-        <li className="media">
+        <li onClick={() => onSelectPlayNow(video)}
+            className="media"
+        >
             <div className="media-left">
                 <figure className="image">
                     <img src={imgUrl} alt=""/>
