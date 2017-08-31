@@ -1,0 +1,14 @@
+.is-clipped {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.2em !important;        /* fallback */
+    max-height: 2.5em;       /* fallback */
+    width: 100%;
+    margin: 0 auto;
+}

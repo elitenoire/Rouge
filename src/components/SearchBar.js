@@ -14,13 +14,12 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div>
-                <input
-                    className="input is-danger"
-                    value={this.state.term}
-                    onChange={e => this.onInputChange(e.target.value)}
-                />
-            </div>
+            <input
+                className="input is-danger"
+                value={this.state.term}
+                placeholder="Search..."
+                onChange={e => this.onInputChange(e.target.value)}
+            />
         )
     }
 };

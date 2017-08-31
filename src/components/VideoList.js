@@ -4,15 +4,17 @@ import { VideoListItem } from './../components';
 const VideoList = ({ videos, onSelectPlayNow }) => {
     const videoItems = videos.map(vid =>
         (<VideoListItem
-            key={vid.etag}
+            key={vid.id}
             video={vid}
             onSelectPlayNow={onSelectPlayNow}
         />));
 
     return (
-        <ul className="box is-gray">
-            {videoItems}
-        </ul>
+        <div className="box is-gray">
+            <ul className="menu-list">
+                {videoItems}
+            </ul>
+        </div>
     )
 }
 
