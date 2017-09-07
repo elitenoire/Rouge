@@ -4,7 +4,8 @@ import _ from 'lodash';
 import YouTubeSearch from 'youtube-search';
 import { SearchBar, VideoList, VideoDetail } from './components';
 
-const API_KEY = 'AIzaSyCpFxRHZXmSL0vct7PZmZ6GNlWhBSVcT1E';
+//need api key from google youtube api
+const API_KEY = '';
 
 
 class App extends Component {
@@ -19,12 +20,9 @@ class App extends Component {
   searchOnRouge(term) {
     var opts = {key: API_KEY, maxResults: 5}
     YouTubeSearch(term, opts, (err, result) => {
-      if(err) return console.error(err, 'cant fetch data');
+      if(err) return console.error(err, 'cant fetch data: api key incorrect');
       this.setState({videos: result, playingNow:result[0]})
-      // console.log(result);
     })
-      // .then(result => this.setState({videos: result, playingNow:result[0]}))
-      // .catch(err => console.error(err, 'cant fetch data'))
   }
 
   render() {
